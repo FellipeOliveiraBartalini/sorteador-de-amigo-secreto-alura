@@ -1,3 +1,10 @@
+html {
+  font-family: 'Poppims', sans-serif;
+  font-size: 16px;
+
+  background-color: #4b69fd;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
