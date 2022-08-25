@@ -15,6 +15,7 @@ export default function Sorteio() {
         event.preventDefault();
         if (resultado.has(participanteDaVez)) {
             setAmigoSecreto(resultado.get(participanteDaVez)!);
+            setTimeout(() => setAmigoSecreto(''), 5000)
         }
     }
 
@@ -47,7 +48,7 @@ export default function Sorteio() {
 
                 <button className={style.form__button}>Sortear</button>
             </form>
-            {amigoSecreto && <p role='alert' className={style.form__resultado}>{amigoSecreto}</p>}
+            {amigoSecreto &&<p role='alert' className={style.form__resultado}>{amigoSecreto}</p>}
             <footer className="sorteio">
                 <img src="/imagens/aviao.png" className="aviao" alt="Um desenho de um avião de papel" />
             </footer>
