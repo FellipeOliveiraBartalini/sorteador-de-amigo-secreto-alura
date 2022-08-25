@@ -1,11 +1,14 @@
 import React, { useRef, useState } from 'react';
 import { useAdicionarParticipante } from '../../state/hooks/useAdicionarParticipante';
+import { useMensagemDeErro } from '../../state/hooks/useMensagemDeErro';
 
 export default function Formulario() {
 
     const [nome, setNome] = useState('');
 
     const inputRef = useRef<HTMLInputElement>(null);
+
+    const mensagemDeErro = useMensagemDeErro();
 
     const adicionarNaLista = useAdicionarParticipante();
 
@@ -26,6 +29,7 @@ export default function Formulario() {
                 placeholder='Insira os nomes dos participantes'
             />
             <button disabled={!nome}>Adicionar</button>
+            {mensagemDeErro && <p role='alert'>{mensagemDeErro}</p>}
         </form>
     );
 }
