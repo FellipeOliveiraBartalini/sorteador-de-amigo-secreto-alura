@@ -1,17 +1,10 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { useListaDeParticipantes } from '../../state/hooks/useListaDeParticipantes';
 import { useResultadoSorteio } from '../../state/hooks/useResultadoSorteio';
 import style from './Sorteio.module.scss';
 
 export default function Sorteio() {
     const participantes = useListaDeParticipantes();
-
-    const navigate = useNavigate();
-    
-    if (participantes.length == 0) {
-        navigate('/');
-    }
 
     const [participanteDaVez, setParticipanteDaVez] = useState('');
     const [amigoSecreto, setAmigoSecreto] = useState('');
