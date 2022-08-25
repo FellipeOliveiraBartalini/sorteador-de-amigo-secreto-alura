@@ -17,7 +17,6 @@ describe('o comportamento do formulário', () => {
 
         expect(input).toBeInTheDocument();
         expect(botao).toBeDisabled();
-
     });
 
     test('adicionar um participante caso exista um nome preenchido', () => {
