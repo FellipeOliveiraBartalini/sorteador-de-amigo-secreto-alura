@@ -1,7 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { RecoilRoot } from 'recoil';
+import { Card } from './components/card';
 import Configuracao from './pages/configuracao';
+import Sorteio from './pages/sorteio';
 
 function App() {
   return (
@@ -9,7 +11,10 @@ function App() {
     <BrowserRouter>
       <RecoilRoot>
         <Routes>
-          <Route path='/' element={<Configuracao />} />
+          <Route element={<Card />}>
+            <Route index element={<Configuracao />} />
+            <Route path='sorteio' element={<Sorteio />} />
+          </Route>
         </Routes>
       </RecoilRoot>
     </BrowserRouter>

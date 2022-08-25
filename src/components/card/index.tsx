@@ -1,10 +1,11 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom';
 import style from './Card.module.scss';
 
-export const Card: React.FC = ({children}) => {
+export const Card = () => {
     return (
         <div className={style.card}>
-            {children}
+            <Outlet />
         </div>
     );
 }
