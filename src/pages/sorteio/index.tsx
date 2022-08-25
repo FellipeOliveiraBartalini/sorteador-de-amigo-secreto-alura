@@ -31,6 +31,9 @@ export default function Sorteio() {
                     value={participanteDaVez}
                     onChange={event => setParticipanteDaVez(event.target.value)}
                 >
+                    <option className={style.form__option}>
+                        Selecione seu nome
+                    </option>
                     {
                         participantes.map(participante => (
                             <option key={participante} className={style.form__option}>
