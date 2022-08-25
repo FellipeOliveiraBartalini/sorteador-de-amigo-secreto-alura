@@ -2,26 +2,42 @@
 
 exports[`a pagina de configuração deve ser renderizada corretamente 1`] = `
 <div>
-  <form>
-    <input
-      placeholder="Insira os nomes dos participantes"
-      type="text"
-      value=""
-    />
-    <button
-      disabled=""
-    >
-      Adicionar
-    </button>
-    
-  </form>
-  <ul />
-  <footer>
-    <button
-      disabled=""
-    >
-      Iniciar brincadeira!
-    </button>
-  </footer>
+  <div
+    class="card"
+  >
+    <section>
+      <h2>
+        Vamos começar!
+      </h2>
+      <form
+        class="form"
+      >
+        <input
+          class="form__input"
+          placeholder="Insira os nomes dos participantes"
+          type="text"
+          value=""
+        />
+        <button
+          class="form__button"
+          disabled=""
+        >
+          Adicionar
+        </button>
+        
+      </form>
+      <ul />
+      <footer
+        class="footer"
+      >
+        <button
+          class="footer__button"
+          disabled=""
+        >
+          Iniciar brincadeira!
+        </button>
+      </footer>
+    </section>
+  </div>
 </div>
 `;
