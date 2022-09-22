@@ -1,0 +1,38 @@
+@import '/src/styles/globals.scss';
+
+.header {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    padding: 60px;
+
+    .header__logo {
+        background-image: url("../../../public/imagens/logo-pequeno.png");
+        width: 235px;
+        height: 199px;
+    }
+
+    .header__participante {
+        z-index: 1;
+        width: 236px;
+    }
+}
+
+@media screen and (min-width: $breakpoint-tablet) {
+    .header {
+        padding-top: 120px;
+        justify-content: center;
+        flex-flow: row nowrap;
+
+        .header__logo {
+            background-image: url("../../../public/imagens/logo.png");
+            width: 351px;
+            height: 117px;
+        }
+
+        .header__participante {
+            align-self: flex-end;
+        }
+    }
+}
